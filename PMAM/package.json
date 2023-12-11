@@ -1,1 +1,19 @@
+{
+  "name": "mynodejs",
+  "version": "1.0.0",
+  "description": "Learning",
+  "main": "index.js",
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "formidable": "^3.5.1",
+    "json-diff": "^1.0.6",
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sushil Parab",
+  "license": "ISC"
+}
 
