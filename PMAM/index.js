@@ -39,7 +39,7 @@ app.get('/', async (req, res) => {
 
     res.render('index', {
         pageTitle: 'Compare Two excel files',
-        WelCome: greet
+        WelCome: 'WelCome!'
     })
 });
 
