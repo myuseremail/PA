@@ -38,7 +38,7 @@ app.get('/', async (req, res) => {
       greet = 'Good Evening';
 
     res.render('index', {
-        pageTitle: 'Compare Two excel files',
+        pageTitle: 'Compare two excel files here.',
         WelCome: 'WelCome!'
     })
 });
@@ -119,7 +119,7 @@ app.post('/excel_compare_result', async (req, res) => {
    console.log(`Prepare for HTML Preview: ${(Date.now() - start)/1000} sec`);
    
    const str = JSON.stringify(diffj, (key, val) => {
-       return String(val).replace(/\n\s+\.\.\./g, ``).replace(/: "<<<(\d+)>>>:/g, '$1:');;
+       return String(val).replace(/\n\s+\.\.\./g, ``).replace(/: "<<<(\d+)>>>:/g, '$1:').replace(/: "\r\n/g, '\n').replace(/: "\n\r/g, '\n');
    });
    
    console.log(JSON.parse(str));
