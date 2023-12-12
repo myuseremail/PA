@@ -38,7 +38,7 @@ app.get('/', async (req, res) => {
       greet = 'Good Evening';
 
     res.render('index', {
-        pageTitle: 'Compare two excel files here.',
+        pageTitle: 'Excel Comparison',
         WelCome: 'WelCome!'
     })
 });
