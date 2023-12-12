@@ -119,7 +119,7 @@ app.post('/excel_compare_result', async (req, res) => {
    console.log(`Prepare for HTML Preview: ${(Date.now() - start)/1000} sec`);
    
    const str = JSON.stringify(diffj, (key, val) => {
-       return String(val).replace(/\n\s+\.\.\./g, ``).replace(/: "<<<(\d+)>>>:/g, '$1:').replace(/: "\r\n/g, '\n').replace(/: "\n\r/g, '\n');
+       return String(val).replace(/\n\s+\.\.\./g, ``).replace(/: "<<<(\d+)>>>:/g, '$1:');
    });
    
    console.log(JSON.parse(str));
@@ -159,7 +159,7 @@ app.post('/excel_compare_result', async (req, res) => {
             </head>
             <body>
                 <div>
-                    <pre style="display:inline-block;font-size:16pt; border:4px black double;padding:10px;color:blue;">${JSON.parse(str1)}</pre>
+                    <pre style="display:inline-block;font-size:14pt; border:4px black double;padding:10px;color:blue;">${JSON.parse(str1)}</pre>
                 </div>
             </body>
         </html>`);
