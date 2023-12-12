@@ -44,8 +44,8 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/excel_compare_result', async (req, res) => {
-    cluster.fork;
-    cluster.fork;
+//    cluster.fork;
+//    cluster.fork;
     const start = Date.now();
 
     const form = new formidable.IncomingForm();
